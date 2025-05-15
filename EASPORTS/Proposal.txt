@@ -1,0 +1,45 @@
+# Defensive Mastermind – Pre-Snap Player Lock System
+## (with focus on competitive scene, pro level)
+
+With the rapid evolution of offensive strategy and creative on-field attacks, defense often lags behind due to limited play design and control options. To help level the playing field and give defensive players more agency, I propose a new feature called “Defensive Mastermind”, built around a “Pre-Snap Lock” system.
+While EA Sports College Football already includes a basic player lock (activated by clicking L3), this lock resets after every play and doesn't offer much flexibility. The Defensive Mastermind feature expands this mechanic, giving players more strategic options before the snap even happens.
+
+# How It Works
+
+## Pre-Snap Lock Selection
+
+Similar to how quarterbacks choose a receiver by pressing a specific button (e.g., [X], [Y], [A]), defensive players can double-tap and hold the left joystick to activate Pre-Snap Lock Mode. While holding it, they can then press one of the throw-selection buttons (e.g., [A], [B], [X], [Y]) to lock onto a specific offensive player—like a receiver, running back, or tight end—based on those same keys used for throws.
+
+Behavior Modes After selecting a player to lock on to, defenders can choose how they want to react once the ball is snapped:
+
+Tight Lock – Stick to the player like glue (ideal for man-to-man).
+
+Loose Cover – Guard a general area around the player (great for anticipating short or mid routes).
+
+Run Anticipation – Shift forward slightly in case of a handoff.
+
+Control Options These modes could be selected using already existing controls—maybe pressing the selected throw-button again for cycling behaviors—or by using modifiers like triggers or joystick tilts. EA could also implement a simple visual indicator to show the current mode before the snap.
+
+## Why It Works
+
+This feature brings a new layer of strategy to the defensive side of the ball. It forces players to think ahead, rewards film study and anticipation, and offers advanced users more tools without removing any core mechanics. It also helps close the gap between offense and defense by giving defenders more nuanced control that mirrors the flexibility quarterbacks already have.
+
+In short: the old mechanics are still there, but this takes defense one step closer to being just as skill-based, reactive, and rewarding as the offensive game.
+
+
+## BreakDown of UML diagram
+
+GameController: Will manage the users inputs (button presses), tracks when pre snap system is being used
+
+DefensiveMastermind: Manges lock on mechanicsm target selectionm and behavior mode setting (how the defender acts)
+
+PlayerLock: The lock onto the offensive player, it also includes the behavior of the player as well
+
+Denfensive player: The defender who can lock onto an offensive player, this determined by who the player has their switch cursor on, and apply a specific behavior mode.
+
+OffensivePlayer: The player being locked onto, whose movements and routes the defender anticipates.
+
+BehaviorMode: Defines the defensive Behavior discussed above: TightLock, LooseCover, RunAnticipation
+
+UIIndicator:Provides visual feedback to the player about the current lock and behavior mode
+
